@@ -1,5 +1,3 @@
-# Sql-practice
-My SQL practice and Oracle SQL queries
 # SQL Practice — Oracle SQL
 
 Мой учебный проект по изучению SQL и Oracle SQL на базе данных HR Schema.
