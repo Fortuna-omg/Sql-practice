@@ -44,3 +44,39 @@ JOIN employees e2
     ON e2.manager_id = e.employee_id
 WHERE TO_CHAR(e.hire_date, 'YYYY') = '2005'
   AND TO_CHAR(e2.hire_date, 'YYYY') < '2005';
+
+-- =========================================
+-- Subqueries (Подзапросы)
+-- =========================================
+
+-- 1. Employees earning above the company average
+SELECT first_name,
+       last_name,
+       salary
+FROM employees
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees
+);
+
+-- 2. Employees earning more than their department average
+SELECT e.first_name,
+       e.last_name,
+       e.salary,
+       e.department_id
+FROM employees e
+WHERE e.salary > (
+    SELECT AVG(e2.salary)
+    FROM employees e2
+    WHERE e2.department_id = e.department_id
+);
+
+-- 3. Employees with the maximum salary in the company
+SELECT first_name,
+       last_name,
+       salary
+FROM employees
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM employees
+);
