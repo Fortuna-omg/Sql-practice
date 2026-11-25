@@ -23,6 +23,19 @@
 - Подзапросы с IN и EXISTS
 - Использование подзапросов с ANY и ALL
 
+### DML (Data Manipulation Language)
+- INSERT — добавление данных
+- UPDATE — обновление данных
+- DELETE — удаление данных
+- MERGE — добавление и обновление данных
+
+### TCL (Transaction Control Language)
+- COMMIT — подтверждение транзакции
+- ROLLBACK — отмена транзакции
+- SAVEPOINT — создание точки сохранения
+- Принципы ACID
+- Транзакции (Transactions)
+
 ### Oracle SQL
 - TO_CHAR
 - TO_DATE
